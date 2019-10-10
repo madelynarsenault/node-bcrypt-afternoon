@@ -35,11 +35,11 @@ app.post('/auth/register', authCtrl.login)
 app.get('/auth/logout', authCtrl.logout)
 
 app.get('/api/treasure/dragon', treasureCtrl.dragonTreasure)
-app.get('/api/treasure/user', auth.usersOnly, treasureCtrl.getMyTreasure)
+app.get('/api/treasure/user', treasureCtrl.getUserTreasure)
 app.post('/api/treasure/user', auth.usersOnly, treasureCtrl.addMyTreasure)
 app.get('/api/treasure.all', auth.usersOnly, treasureCtrl.getAllTreasure)
 
-
+ 
 
 
 
